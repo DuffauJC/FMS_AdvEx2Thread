@@ -1,0 +1,30 @@
+package fr.fms;
+
+public class TestThread extends Thread {
+
+	public TestThread(String name) {
+		super(name);
+	}
+
+	public synchronized void run() {
+		for (int i = 0; i < 5; i++) {
+
+			System.out.print(this.getName());
+		}
+	}
+
+
+	public static  void main(String[] args) {
+		// TODO Auto-generated method stub
+		Thread t =new TestThread("1-");
+		Thread t8 =new TestThread("5-----");
+		Thread t2 =new TestThread("3---");	
+		Thread t4 =new TestThread("4----");
+		Thread t6 =new TestThread("2--");	
+
+		t.start(); t2.start(); t4.start(); t6.start(); t8.start();
+
+	}
+
+
+}
