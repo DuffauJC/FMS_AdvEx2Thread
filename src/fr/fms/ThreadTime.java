@@ -1,11 +1,17 @@
 package fr.fms;
 
 import java.text.DateFormat;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class ThreadTime {
 
+	
+	private static void cls() {
+		for (int i = 0; i < 50; ++i) System.out.println();
+		
+	}
 	public static void main(String[] args) {
 		//DateFormat df = new SimpleDateFormat("HH:mm:ss");
 		Thread thread = new Thread(new MonRunnable(1000));
@@ -31,14 +37,18 @@ public class ThreadTime {
 			while(true) {
 				try {
 					Thread.sleep(delai);
-					//System.out.println("-");
-					System.out.println(df.format(new Date()));
 					
+					cls();
+					System.out.println(df.format(new Date()));
+			
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
+				
 			}
 		}
+
+	
 
 	}
 }
