@@ -6,3 +6,7 @@ Afin de pouvoir exécuter l'application sur votre poste, vous devez d'aborder in
   * Java 8 mini
   * Jdk
   * un IDE : Eclipse, intellij, vscode...
+
+Pour test le fichier ThreadTime :
+* terminal : javac ThreadTime.java  dans le package
+* terminal : java fr.fms/ThreadTime    depuis le dossier src
